@@ -1,0 +1,10 @@
+John Doe,28,Engineering,80000.0
+Jane Smith,35,Marketing,75000.0
+Bob Johnson,40,Finance,90000.0
+Alice Williams,32,Engineering,85000.0
+Charlie Brown,29,HR,70000.0
+Eva Davis,45,Finance,95000.0
+Frank Wilson,38,Marketing,82000.0
+Grace Miller,31,Engineering,88000.0
+Henry Lee,42,HR,72000.0
+Ivy Anderson,34,Marketing,89000.0
