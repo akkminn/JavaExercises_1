@@ -1,13 +1,22 @@
-blic class Course {
+package application;
+
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
+public class Course {
     
     // Private instance variables for course's code, name, maximum capacity
     private int code;
     private String name;
     private int MAX_CAPACITY = 32;
-    private int grade = 0;
-    private int student = 0;
     
-    /**
+    int student = 0;
+    private int grade = 0;
+    
+    
+    /*
      * Static variable for to keep track of the total number of enrolled students 
      * across all instances of the Course class.
      */
@@ -18,14 +27,15 @@ blic class Course {
         this.code = code;
         this.name = name;
     }
-
-    // Setter methods
-    public void setGrade(int grade) {
-        this.grade = grade;
+    
+    // Constructor for course name and grade
+    public Course(String name, int grade) {
+    	this.name = name;
+    	this.grade = grade;
     }
-
-    public void setStudentNumber(int num) {
-        this.student = num;
+    
+    public void setGrade(int grade) {
+    	this.grade = grade;
     }
 
     // Getter methods
@@ -49,8 +59,20 @@ blic class Course {
         return student;
     }
 
-    // A static method to retrieve the total number of enrolled students
-    public static void numberOfEnrolledStudents() {
-        System.out.println("The number of enrolled student of this course is " + totalStudent);
-    }
+	public IntegerProperty codeProperty() {
+		return new SimpleIntegerProperty(code);
+	}
+	
+	public IntegerProperty gradeProperty() {
+		return new SimpleIntegerProperty(grade);
+	}
+
+	public StringProperty nameProperty() {
+		return new SimpleStringProperty(name);
+	}
+
+	public IntegerProperty studentProperty() {
+		return new SimpleIntegerProperty(student);
+	}
+
 }
